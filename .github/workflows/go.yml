@@ -21,6 +21,9 @@ jobs:
       with:
         check-latest: true
         
+    - name: Install Protoc
+      uses: arduino/setup-protoc@v3
+        
     - name: Generate
       run: go generate -v ./...
 
