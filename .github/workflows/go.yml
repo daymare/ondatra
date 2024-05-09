@@ -20,6 +20,9 @@ jobs:
       uses: actions/setup-go@v4
       with:
         check-latest: true
+        
+    - name: Generate
+      run: go generate -v ./...
 
     - name: Build
       run: go build -v ./...
